@@ -1,190 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-
-<plist version="1.0"> <dict>
-
-<!-- ===================================================== -->
-
-<!-- FRAME RATE -->
-
-<!-- ===================================================== -->
-
-<key>CADisableMinimumFrameDurationOnPhone</key>
-<true/>
-
-<!-- ===================================================== -->
-
-<!-- BUNDLE -->
-
-<!-- ===================================================== -->
-
-<key>CFBundleDevelopmentRegion</key>
-<string>$(DEVELOPMENT_LANGUAGE)</string>
-
-<key>CFBundleDisplayName</key>
-<string>Kafe Stogu</string>
-
-<key>CFBundleExecutable</key>
-<string>$(EXECUTABLE_NAME)</string>
-
-<key>CFBundleIdentifier</key>
-<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-
-<key>CFBundleInfoDictionaryVersion</key>
-<string>6.0</string>
-
-<key>CFBundleName</key>
-<string>kafe_stogu</string>
-
-<key>CFBundlePackageType</key>
-<string>APPL</string>
-
-<key>CFBundleShortVersionString</key>
-<string>$(FLUTTER_BUILD_NAME)</string>
-
-<key>CFBundleSignature</key>
-<string>????</string>
-
-<key>CFBundleVersion</key>
-<string>$(FLUTTER_BUILD_NUMBER)</string>
-
-<!-- ===================================================== -->
-
-<!-- LOCAL NETWORK -->
-
-<!-- ===================================================== -->
-
-<key>NSLocalNetworkUsageDescription</key>
-<string>Kafe Stogu uygulaması, kafe içerisindeki bilgisayarda çalışan stok sistemine bağlanmak için yerel ağ erişimini kullanır.</string>
-
-<!-- ===================================================== -->
-
-<!-- HTTP / APP TRANSPORT SECURITY -->
-
-<!-- ===================================================== -->
-
-<key>NSAppTransportSecurity</key>
+<plist version="1.0">
 <dict>
 
-<!--
-    API yerel ağda HTTP kullanıyor:
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
 
-    http://192.168.1.100:5000/api
--->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
 
-<key>NSAllowsArbitraryLoads</key>
-<true/>
+    <key>CFBundleDisplayName</key>
+    <string>Kafe Stogu</string>
 
-</dict>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
 
-<!-- ===================================================== -->
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 
-<!-- IPHONE OS -->
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
 
-<!-- ===================================================== -->
+    <key>CFBundleName</key>
+    <string>kafe_stogu</string>
 
-<key>LSRequiresIPhoneOS</key>
-<true/>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
 
-<!-- ===================================================== -->
+    <key>CFBundleShortVersionString</key>
+    <string>$(FLUTTER_BUILD_NAME)</string>
 
-<!-- SCENE -->
+    <key>CFBundleSignature</key>
+    <string>????</string>
 
-<!-- ===================================================== -->
+    <key>CFBundleVersion</key>
+    <string>$(FLUTTER_BUILD_NUMBER)</string>
 
-<key>UIApplicationSceneManifest</key>
-<dict>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>Kafe Stogu uygulaması, kafe içerisindeki bilgisayarda çalışan stok sistemine bağlanmak için yerel ağ erişimini kullanır.</string>
 
-<key>UIApplicationSupportsMultipleScenes</key>
-<false/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 
-<key>UISceneConfigurations</key>
-<dict>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
 
-    <key>UIWindowSceneSessionRoleApplication</key>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
 
-    <array>
-
+        <key>UISceneConfigurations</key>
         <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneClassName</key>
+                    <string>UIWindowScene</string>
 
-            <key>UISceneClassName</key>
-            <string>UIWindowScene</string>
+                    <key>UISceneConfigurationName</key>
+                    <string>flutter</string>
 
-            <key>UISceneConfigurationName</key>
-            <string>flutter</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 
-            <key>UISceneDelegateClassName</key>
-            <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-
-            <key>UISceneStoryboardFile</key>
-            <string>Main</string>
-
+                    <key>UISceneStoryboardFile</key>
+                    <string>Main</string>
+                </dict>
+            </array>
         </dict>
+    </dict>
 
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
 
 </dict>
-
-</dict>
-
-<!-- ===================================================== -->
-
-<!-- INDIRECT INPUT -->
-
-<!-- ===================================================== -->
-
-<key>UIApplicationSupportsIndirectInputEvents</key>
-<true/>
-
-<!-- ===================================================== -->
-
-<!-- STORYBOARD -->
-
-<!-- ===================================================== -->
-
-<key>UILaunchStoryboardName</key>
-<string>LaunchScreen</string>
-
-<key>UIMainStoryboardFile</key>
-<string>Main</string>
-
-<!-- ===================================================== -->
-
-<!-- IPHONE ORIENTATIONS -->
-
-<!-- ===================================================== -->
-
-<key>UISupportedInterfaceOrientations</key>
-
-<array>
-
-<string>UIInterfaceOrientationPortrait</string>
-
-<string>UIInterfaceOrientationLandscapeLeft</string>
-
-<string>UIInterfaceOrientationLandscapeRight</string>
-
-</array>
-
-<!-- ===================================================== -->
-
-<!-- IPAD ORIENTATIONS -->
-
-<!-- ===================================================== -->
-
-<key>UISupportedInterfaceOrientations~ipad</key>
-
-<array>
-
-<string>UIInterfaceOrientationPortrait</string>
-
-<string>UIInterfaceOrientationPortraitUpsideDown</string>
-
-<string>UIInterfaceOrientationLandscapeLeft</string>
-
-<string>UIInterfaceOrientationLandscapeRight</string>
-
-</array>
-
-</dict> </plist>
+</plist>
