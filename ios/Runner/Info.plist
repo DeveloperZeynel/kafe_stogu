@@ -2,20 +2,21 @@
 
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
-<plist version="1.0">
-<dict>
+<plist version="1.0"> <dict>
 
-```
 <!-- ===================================================== -->
+
 <!-- FRAME RATE -->
+
 <!-- ===================================================== -->
 
 <key>CADisableMinimumFrameDurationOnPhone</key>
 <true/>
 
-
 <!-- ===================================================== -->
+
 <!-- BUNDLE -->
+
 <!-- ===================================================== -->
 
 <key>CFBundleDevelopmentRegion</key>
@@ -48,92 +49,98 @@
 <key>CFBundleVersion</key>
 <string>$(FLUTTER_BUILD_NUMBER)</string>
 
-
 <!-- ===================================================== -->
+
 <!-- LOCAL NETWORK -->
+
 <!-- ===================================================== -->
 
 <key>NSLocalNetworkUsageDescription</key>
 <string>Kafe Stogu uygulaması, kafe içerisindeki bilgisayarda çalışan stok sistemine bağlanmak için yerel ağ erişimini kullanır.</string>
 
-
 <!-- ===================================================== -->
+
 <!-- HTTP / APP TRANSPORT SECURITY -->
+
 <!-- ===================================================== -->
 
 <key>NSAppTransportSecurity</key>
 <dict>
 
-	<!--
-		API yerel ağda HTTP kullanıyor:
+<!--
+    API yerel ağda HTTP kullanıyor:
 
-		http://192.168.1.100:5000/api
-	-->
+    http://192.168.1.100:5000/api
+-->
 
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
 
 </dict>
 
-
 <!-- ===================================================== -->
+
 <!-- IPHONE OS -->
+
 <!-- ===================================================== -->
 
 <key>LSRequiresIPhoneOS</key>
 <true/>
 
-
 <!-- ===================================================== -->
+
 <!-- SCENE -->
+
 <!-- ===================================================== -->
 
 <key>UIApplicationSceneManifest</key>
 <dict>
 
-	<key>UIApplicationSupportsMultipleScenes</key>
-	<false/>
+<key>UIApplicationSupportsMultipleScenes</key>
+<false/>
 
-	<key>UISceneConfigurations</key>
-	<dict>
+<key>UISceneConfigurations</key>
+<dict>
 
-		<key>UIWindowSceneSessionRoleApplication</key>
+    <key>UIWindowSceneSessionRoleApplication</key>
 
-		<array>
+    <array>
 
-			<dict>
+        <dict>
 
-				<key>UISceneClassName</key>
-				<string>UIWindowScene</string>
+            <key>UISceneClassName</key>
+            <string>UIWindowScene</string>
 
-				<key>UISceneConfigurationName</key>
-				<string>flutter</string>
+            <key>UISceneConfigurationName</key>
+            <string>flutter</string>
 
-				<key>UISceneDelegateClassName</key>
-				<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+            <key>UISceneDelegateClassName</key>
+            <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 
-				<key>UISceneStoryboardFile</key>
-				<string>Main</string>
+            <key>UISceneStoryboardFile</key>
+            <string>Main</string>
 
-			</dict>
+        </dict>
 
-		</array>
-
-	</dict>
+    </array>
 
 </dict>
 
+</dict>
 
 <!-- ===================================================== -->
+
 <!-- INDIRECT INPUT -->
+
 <!-- ===================================================== -->
 
 <key>UIApplicationSupportsIndirectInputEvents</key>
 <true/>
 
-
 <!-- ===================================================== -->
+
 <!-- STORYBOARD -->
+
 <!-- ===================================================== -->
 
 <key>UILaunchStoryboardName</key>
@@ -142,42 +149,42 @@
 <key>UIMainStoryboardFile</key>
 <string>Main</string>
 
-
 <!-- ===================================================== -->
+
 <!-- IPHONE ORIENTATIONS -->
+
 <!-- ===================================================== -->
 
 <key>UISupportedInterfaceOrientations</key>
 
 <array>
 
-	<string>UIInterfaceOrientationPortrait</string>
+<string>UIInterfaceOrientationPortrait</string>
 
-	<string>UIInterfaceOrientationLandscapeLeft</string>
+<string>UIInterfaceOrientationLandscapeLeft</string>
 
-	<string>UIInterfaceOrientationLandscapeRight</string>
+<string>UIInterfaceOrientationLandscapeRight</string>
 
 </array>
 
-
 <!-- ===================================================== -->
+
 <!-- IPAD ORIENTATIONS -->
+
 <!-- ===================================================== -->
 
 <key>UISupportedInterfaceOrientations~ipad</key>
 
 <array>
 
-	<string>UIInterfaceOrientationPortrait</string>
+<string>UIInterfaceOrientationPortrait</string>
 
-	<string>UIInterfaceOrientationPortraitUpsideDown</string>
+<string>UIInterfaceOrientationPortraitUpsideDown</string>
 
-	<string>UIInterfaceOrientationLandscapeLeft</string>
+<string>UIInterfaceOrientationLandscapeLeft</string>
 
-	<string>UIInterfaceOrientationLandscapeRight</string>
+<string>UIInterfaceOrientationLandscapeRight</string>
 
 </array>
-```
 
-</dict>
-</plist>
+</dict> </plist>
