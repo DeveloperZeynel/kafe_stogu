@@ -1,0 +1,64 @@
+name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      # =====================================================
+      # GITHUB REPOSITORY
+      # =====================================================
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # =====================================================
+      # FLUTTER
+      # =====================================================
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+
+      # =====================================================
+      # FLUTTER VERSION
+      # =====================================================
+
+      - name: Flutter version
+        run: flutter --version
+
+
+      # =====================================================
+      # DEPENDENCIES
+      # =====================================================
+
+      - name: Install dependencies
+        run: flutter pub get
+
+
+      # =====================================================
+      # BUILD IOS
+      # =====================================================
+
+      - name: Build iOS
+        run: flutter build ios --release --no-codesign
+
+
+      # =====================================================
+      # CREATE IPA-LIKE ARCHIVE
+      #
+      # Bu adım imzasız iOS uygulama çıktısını saklar.
+      # Gerçek, kurulabilir IPA için Apple code signing gerekir.
+      # =====================================================
+
+      - name: Archive iOS build
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafe-stogu-ios
+          path: build/ios/iphoneos/
